@@ -2,22 +2,19 @@
   services:
     backend:
       container_name: backend
-      build:
-        context: ./backend/
-        dockerfile: Dockerfile
+      build: ./backend/
       ports:
         - 8080:8080
       volumes:
         - ./backend:/app 
     frontend:
       container_name: frontend
-      build:
-        context: ./frontend/
-        dockerfile: Dockerfile
+      build: ./frontend/
       volumes:
         - ./frontend:/app
       ports:
         - 4000:4000 
+      command: sh -c 'yarn dev && yarn install && yarn build && yarn start'
     database:
       image: mysql:8.0
       container_name: ${MYSQL_DATABASE}
