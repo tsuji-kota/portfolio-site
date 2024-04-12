@@ -2,7 +2,11 @@
   services:
     backend:
       container_name: backend
-      build: ./backend/
+      build: 
+        context: .
+        dockerfile: ./backend/Dockerfile
+      
+      # build: ./backend/
       ports:
         - 8080:8080
       volumes:
@@ -16,8 +20,8 @@
         - 4000:4000 
       command: sh -c 'yarn dev && yarn install && yarn build && yarn start'
     database:
-      image: mysql:8.0
       container_name: ${MYSQL_DATABASE}
+      image: "mysql:8.0"
       environment:
           MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
           MYSQL_DATABASE: ${MYSQL_DATABASE}
