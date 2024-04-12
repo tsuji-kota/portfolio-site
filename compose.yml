@@ -1,0 +1,39 @@
+  version: '3'
+  services:
+    backend:
+      container_name: backend
+      build:
+        context: ./backend/
+        dockerfile: Dockerfile
+      ports:
+        - 8080:8080
+      volumes:
+        - ./backend:/app 
+    frontend:
+      container_name: frontend
+      build:
+        context: ./frontend/
+        dockerfile: Dockerfile
+      volumes:
+        - ./frontend:/app
+      ports:
+        - 4000:4000 
+    database:
+      image: mysql:8.0
+      container_name: ${MYSQL_DATABASE}
+      environment:
+          MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+          MYSQL_DATABASE: ${MYSQL_DATABASE}
+          MYSQL_USER: ${MYSQL_USER}
+          MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+          TZ: ${TZ}
+      command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+      tty: true
+      stdin_open: true
+      volumes:
+          - ./database/data:/var/lib/mysql
+          - ./database/my.cnf:/etc/mysql/conf.d/my.cnf
+          - ./database/sqls:/docker-entrypoint-initdb.d
+      ports:
+          - 3306:3306
+
