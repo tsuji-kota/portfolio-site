@@ -2,11 +2,7 @@
   services:
     backend:
       container_name: backend
-      build: 
-        context: .
-        dockerfile: ./backend/Dockerfile
-      
-      # build: ./backend/
+      build: ./backend/
       ports:
         - 8080:8080
       volumes:
