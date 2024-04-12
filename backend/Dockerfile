@@ -1,10 +1,16 @@
 FROM golang:1.22.2-alpine3.19
 
+RUN mkdir /app
+RUN apk update && apk add git curl
+
 WORKDIR /app
 
+ADD . /app
 
-COPY . .
-RUN cd backend && go mod download
+RUN go mod download
 
+RUN go install github.com/cosmtrek/air@latest
 
-CMD ["go", "run", "CMD/main.go"]
+EXPOSE 8080
+
+CMD ["air", "-c", ".air.toml"]
