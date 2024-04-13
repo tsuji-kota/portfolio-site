@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Stack } from "@mui/material";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Headers, Contents, Footer } from "@/components/Components";
+import { Header, Contents, Footer } from "@/components/components";
 import "./about.css";
 interface Contents {
   id: string;
@@ -48,7 +48,7 @@ Here's some text with **bold** and *italic* formatting.`,
 const About = () => {
   return (
     <div>
-      <Headers />
+
       <div className="nobiru">
         <Box
           sx={{
@@ -56,6 +56,7 @@ const About = () => {
             margin: "auto",
             marginTop: "10px",
           }}
+          
         >
           <Stack>
             {data.map(({ id, markdown, title }, index) => (

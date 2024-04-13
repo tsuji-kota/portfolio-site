@@ -6,8 +6,9 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
+      {/*  <Contents></Contents> */}
       {/* <Contents></Contents> */}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 };
