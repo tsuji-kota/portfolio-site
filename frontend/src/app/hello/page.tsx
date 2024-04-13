@@ -1,13 +1,14 @@
-import React from 'react';
+"use server";
+import React from "react";
+import { Headers, Contents, Footer } from "@/components/Components";
 
-// Todoアプリの中身
 const Home = () => {
-    return (
-        <div className="container mx-auto p-8 text-center max-w-2xl">
-            <h1 className="text-2xl mb-4">Hello</h1>
-     
-        </div>
-    );
+  return (
+    <div>
+      <Headers></Headers>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Home;
