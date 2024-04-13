@@ -1,11 +1,13 @@
 "use server"
 import React from 'react';
-import { Headers } from '@/components/components';
+import { Headers , Contents } from '@/components/components';
 
 const Home = () => {
     return (
         <div>
             <Headers></Headers>
+            <Contents></Contents>
+
         </div>
     );
 };
