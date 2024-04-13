@@ -16,15 +16,12 @@ export const Headers = () => {
   return (
     <div>
       <TabContext value={tabValue}>
-        {/* <Box> */}
         <TabList onChange={handleChange}>
           <Tab label="HISTROY" value="1" />
           <Tab label="ABOUT Me" value="2" />
         </TabList>
-        {/* </Box> */}
 
         <TabPanel value="1">
-          History
           <Histories />
         </TabPanel>
         <TabPanel value="2">About Me</TabPanel>

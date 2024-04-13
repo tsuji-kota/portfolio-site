@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { HistoryCard } from "./Components";
 
-export const Histories = () =>{
-    return(
-        <div>
-            <h1>History aa</h1>
-        </div>
-    )
-}
+export const Histories = () => {
+  return (
+    // <template>
+    <HistoryCard></HistoryCard>
+    // </template>
+  );
+};
