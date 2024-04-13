@@ -4,23 +4,25 @@ import { Box, Typography } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <Box
-      mt="300px"
-      sx={{
-        height: "240px",
-        width: "100vw",
-        backgroundColor: "black",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Typography
-        variant="h6"
-        sx={{ fontFamily: "Roboto", fontWeight: 50, color: "white" }}
+    <div style={{ width: "100%" }}>
+      <Box
+        sx={{
+          marginTop: "300px",
+          height: "240px",
+          width: "100%",
+          backgroundColor: "black",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
-        TSUJI KOTA 2002 -2024
-      </Typography>
-    </Box>
+        <Typography
+          variant="h6"
+          sx={{ fontFamily: "Roboto", fontWeight: 50, color: "white" }}
+        >
+          TSUJI KOTA 2002 -2024
+        </Typography>
+      </Box>
+    </div>
   );
 };
