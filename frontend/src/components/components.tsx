@@ -1,4 +1,4 @@
-export { Headers } from "./Headers";
+export { Header } from "./Header";
 export { Histories } from "./Histories";
 export { HistoryCard } from "./HistoryCard";
 export { Contents } from "./Contents";
