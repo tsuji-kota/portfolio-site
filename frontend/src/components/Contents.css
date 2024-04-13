@@ -1,4 +1,9 @@
-
 .rad {
-    border-radius:  50%;
+  border-radius: 50px;
+  width: 750px;
+  margin: 0 auto;
+}
+
+#contents_body {
+    padding: 45px;
 }
