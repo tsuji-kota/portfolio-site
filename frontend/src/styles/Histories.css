@@ -1,0 +1,11 @@
+.historyList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.historyList > * {
+  flex-basis: calc(33.33% - 10.67px);
+}

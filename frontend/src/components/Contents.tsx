@@ -3,7 +3,7 @@
 import { Box, Chip, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import React, { use, useEffect, useState } from "react";
-import "./Contents.css";
+import "../styles/Contents.css";
 
 interface Contents {
   id: number;
@@ -23,7 +23,7 @@ const data: Contents = {
     "https://s3-ap-northeast-1.amazonaws.com/storage.withnews.jp/2020/07/16/e/90/e901117a-l.jpg",
   make_time: "2024.04.11",
   contents:
-    "知ってた？？今マクドのサムライマックの肉厚ビーフ肉が3枚入ってるらしいよサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマックサムライマック",
+    "知ってた？？今マクドのサムライマックの肉厚ビーフ肉が3枚入ってるらしいよサムライマックサムライマックサムライマック",
 };
 
 export const Contents = () => {

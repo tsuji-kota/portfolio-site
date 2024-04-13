@@ -1,11 +1,11 @@
 "use server";
 import React from "react";
-import { Headers, Contents, Footer } from "@/components/Components";
+import { Header, Contents, Footer } from "@/components/Components";
 
 const Home = () => {
   return (
     <div>
-      <Headers></Headers>
+      <Header></Header>
       <Footer></Footer>
     </div>
   );
