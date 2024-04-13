@@ -1,6 +1,6 @@
 "use server";
 import React from "react";
-import { Header, Contents, Footer } from "@/components/Components";
+import { Header, Contents, Footer } from "@/components/components";
 
 const Home = () => {
   return (

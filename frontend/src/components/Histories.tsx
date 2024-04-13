@@ -1,6 +1,6 @@
 // "use client";
 
-import { HistoryCard } from "./Components";
+import { HistoryCard } from "./components";
 
 import "@/styles/Histories.css";
 

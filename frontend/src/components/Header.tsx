@@ -2,7 +2,7 @@
 import { Avatar, AvatarGroup, Tab, Box } from "@mui/material";
 import { TabList, TabPanel, TabContext } from "@mui/lab";
 import React, { useState } from "react";
-import { Histories } from "./Components";
+import { Histories } from "./components";
 
 import "../styles/Header.css";
 
