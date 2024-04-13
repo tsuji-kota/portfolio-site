@@ -1,0 +1,10 @@
+.nobiru {
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.nobiru img {
+  width: 50% !important;
+  height: auto !important;
+  border-radius: 50px !important;
+}

@@ -10,7 +10,7 @@ interface Contents {
   profile_id: string;
   event_name: string;
   tag: string;
-  image_path: string;
+  img_path: string;
   make_time: string;
   contents: string;
 }
@@ -19,7 +19,7 @@ const data: Contents = {
   profile_id: "tsuji kota",
   event_name: "研究室内で開催したAWS勉強会について紹介します！",
   tag: "ストーリー",
-  image_path:
+  img_path:
     "https://s3-ap-northeast-1.amazonaws.com/storage.withnews.jp/2020/07/16/e/90/e901117a-l.jpg",
   make_time: "2024.04.11",
   contents:
@@ -61,12 +61,13 @@ export const Contents = () => {
       <Stack>
         <Box
           mt="5px"
-          mb="20px"
+          mb="15px"
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height: 200,
+            padding: "30px",
+
             border: "2px solid black",
             borderRadius: "50px",
           }}
@@ -76,7 +77,7 @@ export const Contents = () => {
         <Box
           component="img"
           //ここにimageへのpathを入れる（publicフォルダを作成して保存）
-          src={data.image_path}
+          src={data.img_path}
           alt="event_image"
           sx={{
             borderRadius: "50px",
@@ -87,7 +88,7 @@ export const Contents = () => {
             border: "1px solid black",
             borderRadius: "50px",
           }}
-          mt="20px"
+          mt="15px"
         >
           <Typography variant="h6" id="contents_body">
             {data.contents}
@@ -95,22 +96,5 @@ export const Contents = () => {
         </Box>
       </Stack>
     </div>
-  );
-};
-
-export const ContentsBox = () => {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: 200,
-        border: "3px solid black",
-        borderRadius: "50px",
-      }}
-    >
-      <Typography variant="h5">{data.event_name}</Typography>
-    </Box>
   );
 };

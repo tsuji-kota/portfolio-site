@@ -4,7 +4,7 @@
 ```mermaid
 erDiagram
     profiles ||--o{ histories:"1:N"
-    profiles ||--o{ infomations:"1:N"
+    profiles ||--o{ about:"1:N"
 
     profiles {
         INT id PK
@@ -17,14 +17,14 @@ erDiagram
         VARCHAR event_name
         VARCHAR tag
         VARCHAR img_path
-        DATETIME make_time
-        VARCHER microcms_api   
+        VARCHAR make_time
+        VARCHAR contents
     }
 
-     infomations {
+    about {
         INT id PK
         INT profile_id FK
-        INT title_name FK
-        VARCHER microcms_api
+        INT title FK
+        VARCHAR markdown
     }
 ```
