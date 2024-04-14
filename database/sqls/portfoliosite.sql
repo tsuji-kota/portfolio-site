@@ -1,12 +1,12 @@
 -- profiles テーブルの定義
 CREATE TABLE profiles (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255)
 );
 
 -- histories テーブルの定義
 CREATE TABLE histories (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     profile_id INT,
     event_name VARCHAR(255),
     tag VARCHAR(255),
@@ -18,7 +18,7 @@ CREATE TABLE histories (
 
 -- about テーブルの定義
 CREATE TABLE about (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     profile_id INT,
     title VARCHAR(255),
     markdown TEXT,
