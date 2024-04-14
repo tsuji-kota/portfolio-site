@@ -6,15 +6,16 @@ import (
 )
 
 func main() {	
+	// router := router.GetRouter()
+	router := router.Init()
+
 	// ルートハンドラの定義
 	// router.GET("/", func(c *gin.Context) {
 	// 	c.JSON(200, gin.H{
-	// 		"message": "Hello, World!",
+	// 		"message": "Long time no see!",
 	// 	})
 	// })
 
-	router := router.GetRouter()
-
 	// サーバー起動
-	router.Run(":8080")
+	// router.Run(":8080")
 }

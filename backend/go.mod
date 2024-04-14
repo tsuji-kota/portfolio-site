@@ -1,4 +1,4 @@
-module github.com/tsuji-kota/portfolio-site
+module github.com/tsuji-kota/portfolio-site/backend
 
 go 1.22
 
