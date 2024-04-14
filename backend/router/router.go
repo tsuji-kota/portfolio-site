@@ -2,25 +2,29 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
-	"log"
-	
+	"github.com/tsuji-kota/portfolio-site/backend/controllers"
+	_ "net/http"
 )
 
-func GetRouter(){
+func Init(){
+	r := GetRouter()
+	r.Run(":8080")
+}
+
+func GetRouter() *gin.Engine{
 	router := gin.Default()
 	router.GET("/", 
-		func(c *gin.Context) {	c.JSON(http.StatusBadRequest, gin.H{
-			//400
-			"message": "hello zzzzworld!",
+		func(c *gin.Context) {	c.JSON(200, gin.H{
+			"message": "Put your hands Up!!",
 		})})
 
-	srv := http.Server{
-        Addr:    ":8080",
-        Handler: router,
-    }
-	err := srv.ListenAndServe()
-    if err != nil {
-        log.Fatalf("server run error: %v", err)
-    }
+	d := router.Group("/data")
+	{
+		ctrl := controllers.DataController{}
+		d.GET("",ctrl.Get)
+		// d.POST("",ctrl.Create)
+		// d.PUT("/:id",ctrl.Update)
+		// d.DELETE("/:id",ctrl.Delete)
+	}
+	return router
 }
