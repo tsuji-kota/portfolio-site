@@ -11,7 +11,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { SelectChangeEvent } from "@mui/material/Select";
-import { Footer } from "@/components/Components";
+import { Footer } from "@/components/components";
 import "./admin.css";
 
 interface AboutFieldData {
@@ -272,7 +272,7 @@ const Admin = () => {
                   </Select>
                 </FormControl>
 
-                <input type='file'/>
+                <input type="file" />
 
                 <TextField
                   value={field.contents}
