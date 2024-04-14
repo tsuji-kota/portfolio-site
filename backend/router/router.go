@@ -22,6 +22,7 @@ func GetRouter() *gin.Engine{
 	{
 		ctrl := controllers.DataController{}
 		d.GET("",ctrl.Get)
+		d.GET("/test",ctrl.Postdata)
 		// d.POST("",ctrl.Create)
 		// d.PUT("/:id",ctrl.Update)
 		// d.DELETE("/:id",ctrl.Delete)
