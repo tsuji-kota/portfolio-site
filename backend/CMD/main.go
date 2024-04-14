@@ -13,7 +13,7 @@ func main() {
 	// 	})
 	// })
 
-	router := controller.GetRouter()
+	router := router.GetRouter()
 
 	// サーバー起動
 	router.Run(":8080")
