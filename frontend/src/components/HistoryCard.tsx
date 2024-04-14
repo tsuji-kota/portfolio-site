@@ -1,73 +1,69 @@
 "use client";
 
-import * as React from "react";
+import React from "react";
 import {
   Card,
-  CardActions,
   CardContent,
   CardMedia,
-  Button,
   Typography,
   Box,
+  Modal,
 } from "@mui/material";
+import { History } from "@/components/Histories";
+import { Contents } from "./Contents";
 
-type History = {
-  name: string;
-  abstract: string;
-  img: string;
-};
+interface HistoryCard {
+  history: History;
+}
 
-export const HistoryCard = () => {
-  const histories: History[] = [
-    {
-      name: "粗品",
-      abstract: "ギャンブラー",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fVZtcAtKE_gx_9w_Ce33CG8hqduwtYJ7G0BpIRKN0en_8Dnx",
-    },
-    {
-      name: "せいや",
-      abstract: "仮免監査員",
-      img: "https://s3-ap-northeast-1.amazonaws.com/storage.withnews.jp/2020/07/16/e/90/e901117a-l.jpg",
-    },
-    {
-      name: "佐川ピン芸人",
-      abstract: "マッシュルーム",
-      img: "https://pbs.twimg.com/profile_images/1614539507776499712/90wthMPe_400x400.jpg",
-    },
-    {
-      name: "西さん",
-      abstract: "アフロパーマ",
-      img: "https://pbs.twimg.com/profile_images/1648764597921546240/CTtWOvFf_400x400.jpg",
-    },
-  ];
+export const HistoryCard: React.FC<HistoryCard> = ({ history }) => {
+  const showDetail = () => {
+    console.log("はーい，こんにちは");
+  };
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
-    <Box>
-      {histories.map((history) => {
-        return (
-          // eslint-disable-next-line react/jsx-key
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              alt={history.name}
-              height="9px"
-              image={history.img}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {history.name}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {history.abstract}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-        );
-      })}
-    </Box>
+    <div>
+      <Box>
+        <Card
+          sx={{ width: 350, height: 350, marginLeft: 35 }}
+          onClick={handleOpen}
+        >
+          <CardMedia
+            sx={{
+              borderColor: "grey.500",
+              width: 200,
+              height: 200,
+              marginLeft: 10,
+              marginTop: 1,
+              borderRadius: 1,
+            }}
+            component="img"
+            alt={history.name}
+            height="9rem"
+            image={history.img}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {history.name}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {history.abstract}
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
+
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Contents></Contents>
+      </Modal>
+    </div>
   );
 };
