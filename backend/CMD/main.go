@@ -1,13 +1,14 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"github.com/tsuji-kota/portfolio-site/backend/router"
+
+
 )
 
 func main() {	
-	// router := router.GetRouter()
-	router := router.Init()
+	 router.GetRouter()
+	// router := router.Init()
 
 	// ルートハンドラの定義
 	// router.GET("/", func(c *gin.Context) {
@@ -18,4 +19,5 @@ func main() {
 
 	// サーバー起動
 	// router.Run(":8080")
+	
 }
