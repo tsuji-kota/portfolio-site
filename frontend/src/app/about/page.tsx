@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Stack } from "@mui/material";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Headers, Contents, Footer } from "@/components/Components";
+import { Headers, Footer } from "@/components/Components";
 import "./about.css";
 interface Contents {
   id: string;
@@ -18,16 +18,8 @@ const data = [
     id: "1",
     profile_id: "tsuji kota",
     title: "BACKGRAUND",
-    markdown: `
-## Heading
-This is a Markdown document
-- List item 1
-- List item 2
-## Subheading
-![OpenAI Logo](https://s3-ap-northeast-1.amazonaws.com/storage.withnews.jp/2020/07/16/e/90/e901117a-l.jpg "OpenAIのロゴ")
-
-
-Here's some text with **bold** and *italic* formatting.`,
+    markdown:
+      '## Headinggggg\n  This is a Markdown document\n  - List item 1\n  - List item 2\n  ## Subheading\n  ![OpenAI Logo](https://s3-ap-northeast-1.amazonaws.com/storage.withnews.jp/2020/07/16/e/90/e901117a-l.jpg "OpenAIのロゴ")\n  \n  \n  Here\'s some text with **bold** and *italic* formatting.',
   },
   {
     id: "2",
