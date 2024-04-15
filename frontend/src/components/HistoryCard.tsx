@@ -12,6 +12,8 @@ import {
 import { History } from "@/components/Histories";
 import { Contents } from "./Contents";
 
+import "@/styles/HistoryCard.css";
+
 interface HistoryCard {
   history: History;
 }
@@ -30,8 +32,10 @@ export const HistoryCard: React.FC<HistoryCard> = ({ history }) => {
         <Card
           sx={{ width: 350, height: 350, marginLeft: 35 }}
           onClick={handleOpen}
+          className="card"
         >
           <CardMedia
+            className="card-media"
             sx={{
               borderColor: "grey.500",
               width: 200,

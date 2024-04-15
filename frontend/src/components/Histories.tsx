@@ -50,7 +50,7 @@ export const Histories = () => {
     {
       name: "西さん",
       abstract: "アフロパーマ",
-      img: "https://pbs.twimg.com/profile_images/1648764597921546240/CTtWOvFf_400x400.jpg",
+      img: "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
 

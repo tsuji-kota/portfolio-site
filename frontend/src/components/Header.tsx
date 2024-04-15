@@ -18,22 +18,28 @@ export const Header = () => {
         <Avatar className="avatar" sx={{ width: 49, height: 49 }} alt="Y">
           Y
         </Avatar>
-        <Avatar sx={{ width: 49, height: 49 }} alt="u">
+        <Avatar className="avatar" sx={{ width: 49, height: 49 }} alt="u">
           u
         </Avatar>
-        <Avatar sx={{ width: 49, height: 49 }} alt="k">
+        <Avatar className="avatar" sx={{ width: 49, height: 49 }} alt="k">
           K
         </Avatar>
-        <Avatar sx={{ width: 49, height: 49 }} alt="k">
+        <Avatar className="avatar" sx={{ width: 49, height: 49 }} alt="k">
           H
         </Avatar>
-        <Avatar sx={{ width: 49, height: 49 }} alt="e">
+        <Avatar className="avatar" sx={{ width: 49, height: 49 }} alt="e">
           o
         </Avatar>
-        <Avatar sx={{ width: 49, height: 49 }} alt="e" src="">
+        <Avatar
+          className="avatar"
+          sx={{ width: 49, height: 49 }}
+          alt="e"
+          src=""
+        >
           e
         </Avatar>
         <Avatar
+          className="avatar"
           sx={{ width: 49, height: 49 }}
           alt="e"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yukhoe_by_kimishowota_in_Utsunomiya%2C_Tochigi.jpg/240px-Yukhoe_by_kimishowota_in_Utsunomiya%2C_Tochigi.jpg"

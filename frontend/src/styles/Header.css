@@ -1,3 +1,7 @@
+.headers {
+  background-color: rgb(228, 246, 223);
+}
+
 .AvaterGroups {
   position: absolute;
   left: 0.5%;
@@ -19,4 +23,6 @@
 .avatar {
   border: 2px solid;
   margin-left: -6px;
+  background-color: firebrick;
+  font-family: fantasy;
 }

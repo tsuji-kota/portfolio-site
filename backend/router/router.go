@@ -25,7 +25,7 @@ func GetRouter() *gin.Engine{
 		d.GET("/test",ctrl.Postdata)
 		// d.POST("",ctrl.Create)
 		// d.PUT("/:id",ctrl.Update)
-		// d.DELETE("/:id",ctrl.Delete)
+		d.DELETE("/:id",ctrl.Delete)
 	}
 	return router
 }
